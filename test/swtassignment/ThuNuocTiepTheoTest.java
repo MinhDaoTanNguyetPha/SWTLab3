@@ -5,6 +5,7 @@
  */
 package swtassignment;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
@@ -49,6 +50,38 @@ public class ThuNuocTiepTheoTest {
 //        assertTrue(result);
 //    }
     
+    //TCX1:   1<=n<=MAXN && 0<=x<=n-1 && 0<=y<=n-1 && i<2
+    //      Should only change Banco[x][y] to i-1
+    @Test
+    public void shouldChangeOneElementTCX1() {
+        //given
+        assign(5, -5, 2, 2);
+        //for simplicity, we suppose that Banco will be clear before use.
+        SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        int[][] result= SWTAssignment.Banco.clone();
+        result[x][y]=i-1;
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
+    //TCX2:   1<=n<=MAXN && 0<=x<=n-1 && 0<=y<=n-1 && i>n^2
+    //      Should only change Banco[x][y] to n^2
+    @Test
+    public void shouldChangeOneElementTCX2() {
+        //given
+        assign(5, 30, 2, 2);
+        //for simplicity, we suppose that Banco will be clear before use.
+        SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        int[][] result= SWTAssignment.Banco.clone();
+        result[x][y]=25;
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+    
     //
     @Test
     public void should() {
@@ -56,7 +89,7 @@ public class ThuNuocTiepTheoTest {
         //when
         //then
     }
-
+    
     int n, i, x, y;
     int[][] Banco;
     MyInteger q = new MyInteger();

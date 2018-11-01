@@ -104,13 +104,13 @@ public class SWTAssignment {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         MyInteger q = new MyInteger();
-        q.value = 1;
+        q.value = 0;
         System.out.printf("Cho kich thuoc ban co: ");
         n = Integer.parseInt(sc.nextLine());
         XoaBanco(n);
-        Banco[1][1] = 3;
+        Banco[0][0] = 36;
 
-        ThuNuocTiepTheo(4, 1, 1, q);
+        ThuNuocTiepTheo(37, 0, 0, q);
 
 //        XoaBanco(n-1);
         System.out.printf("\n Ket qua: \n\n");
