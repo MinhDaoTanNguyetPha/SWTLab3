@@ -245,9 +245,10 @@ public class ThuNuocTiepTheoTest {
     public void shouldChangeOneElementTCX1() {
         //given
         assign(5, -5, 2, 2);
-        //for simplicity, we suppose that Banco will be clear before use.
-        SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
-        int[][] result= SWTAssignment.Banco.clone();
+//        //for simplicity, we suppose that Banco will be clear before use.
+//        SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+//        int[][] result= SWTAssignment.Banco.clone();
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
         result[x][y]=i-1;
         //when
         SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
