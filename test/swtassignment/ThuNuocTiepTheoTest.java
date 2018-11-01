@@ -220,39 +220,6 @@ public class ThuNuocTiepTheoTest {
     }
     
     
-//    //TC :  Given:
-//    //      Should throw
-//    @Test
-//    public void shouldThrowExceptionTC() {
-//        //given
-//        assign(n, i, x, y);
-//        boolean result = false;
-//        //when
-//        try { 
-//            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
-//        } catch ( e) {
-//            result = true;
-//        }
-//        //then
-//        assertTrue(result);
-//    }
-    
-//    //TC :  Given:
-//    //      Should throw
-//    @Test
-//    public void shouldThrowExceptionTC() {
-//        //given
-//        assign(n, i, x, y);
-//        boolean result = false;
-//        //when
-//        try { 
-//            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
-//        } catch ( e) {
-//            result = true;
-//        }
-//        //then
-//        assertTrue(result);
-//    }
     
 //    //TC :  Given:
 //    //      Should throw
