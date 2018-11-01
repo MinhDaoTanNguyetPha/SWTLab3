@@ -32,6 +32,195 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
+     
+    //TC :  Given: n > MAXN
+    //      Should throw IndexOutOfBoundsException
+    @Test
+    public void shouldThrowIndexOutOfBoundsExceptionTC2() {
+        //given
+        assign(15, 3, 5, 9);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (IndexOutOfBoundsException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: x < 0
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC3() {
+        //given
+        assign(5, 3, -5, 9);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: x > n-1
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC4() {
+        //given
+        assign(6, 2, 10, 8);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }    
+    
+    //TC :  Given: y  < 0
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC5() {
+        //given
+        assign(5, 3, 6, -5);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: y > n-1
+    //      Should throw
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC6() {
+        //given
+        assign(6, 7, 2, 10);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: n = 0
+    //      Should throw IndexOutOfBoundsException
+    @Test
+    public void shouldThrowIndexOutOfBoundsExceptionTC7() {
+        //given
+        assign(0, 5, 2, 9);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (IndexOutOfBoundsException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: n = MAXN+1
+    //      Should throw IndexOutOfBoundsException
+    @Test
+    public void shouldThrowIndexOutOfBoundsExceptionTC8() {
+        //given
+        assign(11, 5, 2, 9);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (IndexOutOfBoundsException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: x = -1
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC9() {
+        //given
+        assign(5, 2, -1, 7);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    //TC :  Given: x = n
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC10() {
+        //given
+        assign(5, 2, 5, 9);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+
+    //TC :  Given: y = -1
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC11() {
+        //given
+        assign(2, 8, 6, -1);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+
+    //TC :  Given:  y = n 
+    //      Should throw CoordinateOutOfSizeException
+    @Test
+    public void shouldThrowCoordinateOutOfSizeExceptionTC12() {
+        //given
+        assign(8, 5, 7, 8);
+        boolean result = false;
+        //when
+        try { 
+            SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        } catch (CoordinateOutOfSizeException e) {
+            result = true;
+        }
+        //then
+        assertTrue(result);
+    }
+    
+    
     
 //    //TC :  Given:
 //    //      Should throw
