@@ -15,7 +15,6 @@ import org.junit.Test;
  */
 public class ThuNuocTiepTheoTest {
 
-    
     //TC1:  Given: n<1
     //      Should throw IndexOutOfBoundsException
     @Test
@@ -24,7 +23,7 @@ public class ThuNuocTiepTheoTest {
         assign(-5, 3, 5, 8);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (IndexOutOfBoundsException e) {
             result = true;
@@ -32,7 +31,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-     
+
     //TC :  Given: n > MAXN
     //      Should throw IndexOutOfBoundsException
     @Test
@@ -41,7 +40,7 @@ public class ThuNuocTiepTheoTest {
         assign(15, 3, 5, 9);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (IndexOutOfBoundsException e) {
             result = true;
@@ -49,7 +48,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: x < 0
     //      Should throw CoordinateOutOfSizeException
     @Test
@@ -58,7 +57,7 @@ public class ThuNuocTiepTheoTest {
         assign(5, 3, -5, 9);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -66,7 +65,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: x > n-1
     //      Should throw CoordinateOutOfSizeException
     @Test
@@ -75,15 +74,15 @@ public class ThuNuocTiepTheoTest {
         assign(6, 2, 10, 8);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
         }
         //then
         assertTrue(result);
-    }    
-    
+    }
+
     //TC :  Given: y  < 0
     //      Should throw CoordinateOutOfSizeException
     @Test
@@ -92,7 +91,7 @@ public class ThuNuocTiepTheoTest {
         assign(5, 3, 6, -5);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -100,7 +99,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: y > n-1
     //      Should throw
     @Test
@@ -109,7 +108,7 @@ public class ThuNuocTiepTheoTest {
         assign(6, 7, 2, 10);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -117,7 +116,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: n = 0
     //      Should throw IndexOutOfBoundsException
     @Test
@@ -126,7 +125,7 @@ public class ThuNuocTiepTheoTest {
         assign(0, 5, 2, 9);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (IndexOutOfBoundsException e) {
             result = true;
@@ -134,7 +133,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: n = MAXN+1
     //      Should throw IndexOutOfBoundsException
     @Test
@@ -143,7 +142,7 @@ public class ThuNuocTiepTheoTest {
         assign(11, 5, 2, 9);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (IndexOutOfBoundsException e) {
             result = true;
@@ -151,7 +150,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: x = -1
     //      Should throw CoordinateOutOfSizeException
     @Test
@@ -160,7 +159,7 @@ public class ThuNuocTiepTheoTest {
         assign(5, 2, -1, 7);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -168,7 +167,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
+
     //TC :  Given: x = n
     //      Should throw CoordinateOutOfSizeException
     @Test
@@ -177,7 +176,7 @@ public class ThuNuocTiepTheoTest {
         assign(5, 2, 5, 9);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -194,7 +193,7 @@ public class ThuNuocTiepTheoTest {
         assign(2, 8, 6, -1);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -211,7 +210,7 @@ public class ThuNuocTiepTheoTest {
         assign(8, 5, 7, 8);
         boolean result = false;
         //when
-        try { 
+        try {
             SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         } catch (CoordinateOutOfSizeException e) {
             result = true;
@@ -219,9 +218,7 @@ public class ThuNuocTiepTheoTest {
         //then
         assertTrue(result);
     }
-    
-    
-    
+
 //    //TC :  Given:
 //    //      Should throw
 //    @Test
@@ -238,7 +235,6 @@ public class ThuNuocTiepTheoTest {
 //        //then
 //        assertTrue(result);
 //    }
-    
     //TCX1:   1<=n<=MAXN && 0<=x<=n-1 && 0<=y<=n-1 && i<2
     //      Should only change Banco[x][y] to i-1
     @Test
@@ -249,7 +245,7 @@ public class ThuNuocTiepTheoTest {
 //        SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
 //        int[][] result= SWTAssignment.Banco.clone();
         int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
-        result[x][y]=i-1;
+        result[x][y] = i - 1;
         //when
         SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         //then
@@ -264,14 +260,118 @@ public class ThuNuocTiepTheoTest {
         assign(5, 30, 2, 2);
         //for simplicity, we suppose that Banco will be clear before use.
         SWTAssignment.Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
-        int[][] result= SWTAssignment.Banco.clone();
-        result[x][y]=25;
+        int[][] result = SWTAssignment.Banco.clone();
+        result[x][y] = 25;
         //when
         SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
         //then
         assertArrayEquals(result, SWTAssignment.Banco);
     }
-    
+
+    /**
+     * ************************************************
+     */
+    /**
+     * ************************************************
+     */
+    //Statement TC1
+    @Test
+    public void shouldChangeOneElementTCX3() {
+        //given
+        assign(6, 37, 3, 3);
+        Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result[][] = i;
+        result[1][4] = 37; // || result[4][1] = 37
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
+    //Statement TC2
+    @Test
+    public void shouldChangeOneElementTCX4() {
+        //given
+        assign(3, 2, 0, 0);
+        Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        Banco[0][0] = 1;
+        Banco[0][2] = 1;
+        Banco[2][1] = 1;
+
+        //result
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result[][] = i;
+        result[0][0] = 1;
+        result[0][2] = 1;
+        result[2][1] = 1;
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
+    /**
+     * *********************************************************
+     */
+    //Decision TC1
+    @Test
+    public void shouldChangeOneElementTCX5() {
+        //given
+        assign(3, 2, 0, 0);
+        Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        Banco[0][0] = 1;
+        Banco[0][2] = 1;
+        Banco[2][1] = 1;
+
+        //result
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result[][] = i;
+        result[0][0] = 1;
+        result[0][2] = 1;
+        result[2][1] = 1;
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
+    //Decision TC2
+    @Test
+    public void shouldChangeOneElementTCX6() {
+        //given
+        assign(6, 37, 3, 3);
+        Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+
+        //result
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result[][] = i;
+        result[1][4] = 37; // || result[4][1] = 37
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
+    //Decision TC3
+    @Test
+    public void shouldChangeOneElementTCX7() {
+        //given
+        assign(6, 35, 3, 3);
+        Banco = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+
+        //result
+        int[][] result = new int[SWTAssignment.MAXN][SWTAssignment.MAXN];
+        //result[][] = i;
+        result[1][4] = 35; // || result[4][1] = 35
+        result[2][2] = 36;
+        //when
+        SWTAssignment.ThuNuocTiepTheo(i, x, y, q);
+        //then
+        assertArrayEquals(result, SWTAssignment.Banco);
+    }
+
     //
     @Test
     public void should() {
@@ -279,7 +379,7 @@ public class ThuNuocTiepTheoTest {
         //when
         //then
     }
-    
+
     int n, i, x, y;
     int[][] Banco;
     MyInteger q = new MyInteger();
