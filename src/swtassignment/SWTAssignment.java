@@ -49,6 +49,8 @@ public class SWTAssignment {
 //
 //    20  29  14  33  18  23 
     public static int n = 8;
+    public static int stepCover = 0;
+    
 
     public static void ThuNuocTiepTheo(int i, int x, int y, MyInteger q) {
         int k, u, v;
@@ -89,9 +91,10 @@ public class SWTAssignment {
     }
 
     public static void XoaBanco(int n) {
+        stepCover = 0;
         int i, j;
-        for (i = 0; i <= n - 1; i++) {
-            for (j = 0; j <= n - 1; j++) {
+        for (i = stepCover++*0; i <= n - 1 + stepCover++*0; i+=(stepCover++*0)+1) {
+            for (j = stepCover++*0; j <= n - 1 + stepCover++*0; j+=(stepCover++*0)+1) {
                 Banco[i][j] = 0;
             }
         }
