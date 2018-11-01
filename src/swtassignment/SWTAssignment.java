@@ -58,7 +58,7 @@ public class SWTAssignment {
             q1.value = 0;
             u = x + dx[k];
             v = y + dy[k];
-            if ((0 <= u) && (u < n) && (0 <= v) && (v < n) && (Banco[u][v] == 0)) {
+            if ((0 <= u) && (u  < n) && (0 <= v) && (v < n) && (Banco[u][v] == 0)) {
                 Banco[u][v] = i;
                 if (i < n * n) {
                     ThuNuocTiepTheo(i + 1, u, v, q1);
